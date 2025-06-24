@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yelisetty Ashishdattu - Portfolio</title>
+  <title>Ashish Dattu - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --primary: #FF6F3C;
@@ -32,7 +33,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 5%;
-      background-color: white;
+      background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
@@ -40,20 +41,19 @@
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 2rem;
+      list-style: none;
+      gap: 1.5rem;
     }
 
-    nav ul li a {
+    nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 500;
     }
 
-    nav ul li a:hover, nav ul li a:focus {
+    nav a:hover {
       color: var(--primary);
-      border-bottom: 2px solid var(--primary);
     }
 
     section {
@@ -63,9 +63,117 @@
     .hero {
       display: flex;
       flex-direction: column-reverse;
-      align-items: center;
-      justify-content: center;
       text-align: center;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text span {
+      color: var(--primary);
+    }
+
+    .hero-text h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .hero-img {
+      margin-bottom: 2rem;
+      width: 240px;
+      height: 240px;
+      background: var(--accent);
+      border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+      overflow: hidden;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h2.section-title {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .work-card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #e65c2e;
+  transform: translateY(-2px);
+}
+
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      color: var(--text);
+      font-size: 1.5rem;
+    }
+
+    .socials a:hover {
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
 
     @media (min-width: 768px) {
@@ -74,82 +182,6 @@
         justify-content: space-between;
         text-align: left;
       }
-    }
-
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-text h1 span {
-      color: var(--primary);
-    }
-
-    .hero-text h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-text button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .hero-img {
-      width: 240px;
-      height: 240px;
-      background-color: var(--accent);
-      border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .hero-img img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    h2.section-title {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.08);
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .socials {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .socials a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: var(--text);
-    }
-
-    .socials a:hover {
-      color: var(--primary);
     }
   </style>
 </head>
@@ -168,22 +200,28 @@
 
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Hi, I’m <span>Ashish</span></h1>
+      <h1>Hi, I'm <span>Ashish</span></h1>
       <h2>Full Stack & Mobile App Developer</h2>
       <button onclick="location.href='#contact'">Contact</button>
     </div>
     <div class="hero-img">
-      <img src="your-photo.jpg" alt="Ashish's Photo" />
+      <img src="images/profile.jpg" alt="Ashish's Photo">
     </div>
   </section>
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <div class="card">
-      <p>
-        Self-driven developer with 4+ years of experience building scalable web and mobile apps. 
-        Specialized in React Native, Node.js, and AI-powered integrations using tools like ChatGPT.
-      </p>
+      <p>Self-driven developer with 4+ years of experience building scalable web and mobile apps.</p>
+      <p>Proficient in React Native, Node.js, Angular, and RESTful APIs.</p>
+      <p>Published enterprise-grade apps to the Play Store.</p>
+      <p>Skilled in integrating Bluetooth, SQLite, Firebase, and MongoDB.</p>
+      <p>Used OpenAI APIs to implement intelligent chat and automation features.</p>
+      <p>Regularly use ChatGPT to debug, scaffold code, and speed up development.</p>
+      <p>Delivered dashboards, health tech, chat apps, and more.</p>
+      <p>Led projects end-to-end for startups and established companies.</p>
+      <p>Enjoy working in agile environments with evolving requirements.</p>
+      <p>Passionate about merging UX, logic, and AI for modern apps.</p>
     </div>
   </section>
 
@@ -192,25 +230,64 @@
     <div class="card">
       <ul>
         <li><strong>Frontend:</strong> React Native, React.js, Angular, HTML, CSS</li>
-        <li><strong>Backend:</strong> Node.js, Express.js, REST APIs</li>
-        <li><strong>Databases:</strong> MongoDB, Firebase, MySQL, SQLite</li>
-        <li><strong>Tools:</strong> Git, VS Code, Postman, Android Studio</li>
-        <li><strong>Extras:</strong> Bluetooth integration, OpenAI API, reporting</li>
+        <li><strong>Backend:</strong> Node.js, Express.js</li>
+        <li><strong>Databases:</strong> MongoDB, Firebase, SQLite, MySQL</li>
+        <li><strong>Tools:</strong> Git, Postman, VS Code, Android Studio</li>
+        <li><strong>AI / APIs:</strong> OpenAI, Bluetooth, Graphs & Reporting</li>
       </ul>
     </div>
   </section>
 
   <section id="works">
-    <h2 class="section-title">Works</h2>
-    <div class="card">
-      <ul>
-        <li><strong>VRSIIS HRM:</strong> Attendance app – <a href="https://play.google.com/store/apps/details?id=com.VRSATTENDANCE" target="_blank">Play Store</a></li>
-        <li><strong>SmartHealth:</strong> Bluetooth-based health monitoring – <a href="https://play.google.com/store/apps/details?id=com.smartHealth" target="_blank">Play Store</a></li>
-        <li><strong>SynqTransfer:</strong> File transfer app – <a href="https://www.synqapp.in/" target="_blank">Website</a></li>
-        <li><strong>NishConnect:</strong> Chat + AI + Drive – <a href="https://www.nishconnect.com/" target="_blank">Website</a></li>
-      </ul>
+  <h2 class="section-title">Works</h2>
+  <div class="works-grid">
+
+    <div class="work-card">
+      <img src="images/vrsiis.png" alt="VRSIIS HRM App" />
+      <h3>VRSIIS HRM</h3>
+      <p>Attendance app with real-time summaries</p>
+      <a class="button-link" href="https://play.google.com/store/apps/details?id=com.VRSATTENDANCE" target="_blank">View on Play Store</a>
     </div>
-  </section>
+
+    <div class="work-card">
+      <img src="images/smarthealth.png" alt="SmartHealth App" />
+      <h3>SmartHealth</h3>
+      <p>Bluetooth health monitoring + local storage</p>
+      <a class="button-link" href="https://play.google.com/store/apps/details?id=com.smartHealth" target="_blank">View on Play Store</a>
+    </div>
+
+    <div class="work-card">
+      <img src="images/synq.png" alt="SynqTransfer" />
+      <h3>SynqTransfer</h3>
+      <p>Web + mobile file transfer tool</p>
+      <a class="button-link" href="https://www.synqapp.in/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="work-card">
+      <img src="images/nishconnect.png" alt="NishConnect App" />
+      <h3>NishConnect</h3>
+      <p>AI chat, file storage, real-time messaging</p>
+      <a class="button-link" href="https://www.nishconnect.com/" target="_blank">Visit Website</a>
+      <a class="button-link" href="https://play.google.com/store/apps/details?id=com.nishconnect" target="_blank">View on Play Store</a>
+
+    </div>
+<div class="work-card">
+      <img src="images/vrsatms.png" alt="VRS ATMS App" />
+      <h3>VRS ATMS</h3>
+      <p>Advanced tracking and analytics platform with modules like ATMS, ANPR, MET, and VIDS.</p>
+      <a class="button-link"" target="_blank">(In development)</a>
+    </div>
+
+
+    <div class="work-card">
+      <img src="images/synqcalculator.png" alt="SynqCalculator App" />
+      <h3>SynqCalculator</h3>
+      <p>Modern scientific calculator with dark mode, memory & expression validation</p>
+      <a class="button-link" href="https://play.google.com/store/apps/details?id=com.synqcalculator" target="_blank">View on Play Store</a>
+    </div>
+
+  </div>
+</section>
 
   <section id="contact">
     <h2 class="section-title">Contact</h2>
@@ -218,9 +295,9 @@
       <p>Email: <a href="mailto:ashishdattu@gmail.com">ashishdattu@gmail.com</a></p>
       <p>Phone: +91-9160319012</p>
       <div class="socials">
-        <a href="https://linkedin.com/in/YOUR_ID" target="_blank">LinkedIn</a>
-        <a href="https://github.com/YOUR_ID" target="_blank">GitHub</a>
-        <a href="mailto:ashishdattu@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/YOUR_ID" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Ashishyelisetty" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:ashishdattu@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </section>
