@@ -1,12 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yelisetty Ashishdattu - Full Stack Developer</title>
-  </head>
-  <body style="margin:0;background:#F9F9F9;">
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yelisetty Ashishdattu - Portfolio</title>
+  <style>
+    :root {
+      --primary: #FF6F3C;
+      --accent: #FFC93C;
+      --background: #F9F9F9;
+      --card: #FFFFFF;
+      --text: #232323;
+      --placeholder: #7D7D7D;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yelisetty Ashishdattu</h1>
+    <p style="color: var(--placeholder)">Full Stack & Mobile App Developer</p>
+  </header>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I build web and mobile applications using React Native, React.js, Angular, and Node.js. 
+      I leverage tools like ChatGPT to build smarter and faster.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li>React Native, React.js, Angular</li>
+      <li>Node.js, MongoDB, SQLite, Firebase</li>
+      <li>Bluetooth integration, REST APIs, OpenAI</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>VRSIIS HRM:</strong> Attendance app (Play Store)</li>
+      <li><strong>SmartHealth:</strong> Bluetooth-based health monitoring (Play Store)</li>
+      <li><strong>SynqTransfer:</strong> File transfer app</li>
+      <li><strong>NishConnect:</strong> Chat + AI + file drive app</li>
+      <li><strong>ATMS:</strong> Report and analytics dashboard</li>
+      <li><strong>Ewallet / Bitcoincerge:</strong> Crypto/FinTech apps</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Resume</h2>
+    <p>
+      <a href="Yelisetty_Ashishdattu_Resume_2025.pdf" target="_blank">Download My Resume (PDF)</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: ashishdattu@gmail.com<br/>Phone: +91-9160319012</p>
+  </div>
+
+</body>
 </html>
