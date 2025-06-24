@@ -14,143 +14,216 @@
       --placeholder: #7D7D7D;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: var(--background);
       color: var(--text);
-      padding: 1rem;
     }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-      font-size: 2rem;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
     }
 
-    h2 {
-      color: var(--primary);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-
-    a {
-      color: var(--primary);
+    nav ul li a {
       text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav ul li a:hover, nav ul li a:focus {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text h1 span {
+      color: var(--primary);
+    }
+
+    .hero-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hero-img {
+      width: 240px;
+      height: 240px;
+      background-color: var(--accent);
+      border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    h2.section-title {
+      color: var(--primary);
+      margin-bottom: 1rem;
     }
 
     .card {
       background: var(--card);
+      padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      padding: 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .info-line {
-      color: var(--placeholder);
-      text-align: center;
-      font-size: 0.95rem;
-      margin-top: -1rem;
-      margin-bottom: 2rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      margin-bottom: 1rem;
     }
 
     ul {
       padding-left: 1.2rem;
     }
 
-    .project-title {
-      font-weight: bold;
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
-    .resume-link {
-      font-weight: bold;
+    .socials a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: var(--text);
     }
 
-    @media (min-width: 768px) {
-      body {
-        padding: 2rem 15%;
-      }
+    .socials a:hover {
+      color: var(--primary);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>📄 Yelisetty Ashishdattu</h1>
-    <p class="info-line">Full Stack & Mobile App Developer – Hyderabad, India<br/>
-    📧 ashishdattu@gmail.com | 📱 +91-9160319012</p>
-  </header>
-
-  <div class="card">
-    <h2>💼 Professional Summary</h2>
-    <p>
-      Self-driven developer with 4+ years of experience in building scalable mobile and web applications using React Native, React.js, Node.js, and AI tools like ChatGPT. Delivered production-grade apps for healthtech, fintech, and enterprise use cases.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>🛠️ Tech Stack & Skills</h2>
+  <nav>
+    <div><strong>Ashish</strong></div>
     <ul>
-      <li><strong>Frontend:</strong> React Native, React.js, Angular, HTML, CSS</li>
-      <li><strong>Backend:</strong> Node.js, Express.js, REST APIs</li>
-      <li><strong>Databases:</strong> MongoDB, SQLite, Firebase, MySQL</li>
-      <li><strong>Tools:</strong> Git, Postman, ChatGPT, VS Code, Android Studio</li>
-      <li><strong>Others:</strong> AI integration, Bluetooth, Reporting & Analytics</li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 
-  <div class="card">
-    <h2>📱 Key Projects</h2>
-    <ul>
-      <li><span class="project-title">VRSIIS HRM:</span> Attendance app for enterprise clients – <a href="https://play.google.com/store/apps/details?id=com.VRSATTENDANCE" target="_blank">Play Store</a></li>
-      <li><span class="project-title">SmartHealth:</span> Bluetooth health device monitoring – <a href="https://play.google.com/store/apps/details?id=com.smartHealth" target="_blank">Play Store</a></li>
-      <li><span class="project-title">SynqTransfer:</span> Peer-to-peer file sharing – <a href="https://www.synqapp.in/" target="_blank">Website</a></li>
-      <li><span class="project-title">NishConnect:</span> AI chat + drive app – <a href="https://www.nishconnect.com/" target="_blank">Website</a></li>
-      <li><span class="project-title">ATMS:</span> Graph-based reporting dashboard</li>
-      <li><span class="project-title">Ewallet & Bitcoincerge:</span> Fintech/crypto wallet apps</li>
-    </ul>
-  </div>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m <span>Ashish</span></h1>
+      <h2>Full Stack & Mobile App Developer</h2>
+      <button onclick="location.href='#contact'">Contact</button>
+    </div>
+    <div class="hero-img">
+      <img src="your-photo.jpg" alt="Ashish's Photo" />
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>🧑‍💼 Work Experience</h2>
-    <ul>
-      <li><strong>VRS Intelligent Innovative Systems Pvt Ltd</strong> (Oct 2023 – Present)<br/>
-      Full Stack Developer – ATMS & VRSIIS HRM app lead</li>
-      <li><strong>Incrivelsoft Pvt Ltd</strong> (Jan 2020 – Oct 2023)<br/>
-      Developed healthtech & fintech apps using React Native & Node.js</li>
-    </ul>
-  </div>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p>
+        Self-driven developer with 4+ years of experience building scalable web and mobile apps. 
+        Specialized in React Native, Node.js, and AI-powered integrations using tools like ChatGPT.
+      </p>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>🎓 Education</h2>
-    <ul>
-      <li><strong>MBA – IT Management</strong>, Jain University (2022 – 2024)</li>
-      <li><strong>B.Com</strong>, Acharya Nagarjuna University (2017 – 2020)</li>
-    </ul>
-  </div>
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Frontend:</strong> React Native, React.js, Angular, HTML, CSS</li>
+        <li><strong>Backend:</strong> Node.js, Express.js, REST APIs</li>
+        <li><strong>Databases:</strong> MongoDB, Firebase, MySQL, SQLite</li>
+        <li><strong>Tools:</strong> Git, VS Code, Postman, Android Studio</li>
+        <li><strong>Extras:</strong> Bluetooth integration, OpenAI API, reporting</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>📄 Resume</h2>
-    <p><a class="resume-link" href="Yelisetty_Ashishdattu_Resume_2025.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </div>
+  <section id="works">
+    <h2 class="section-title">Works</h2>
+    <div class="card">
+      <ul>
+        <li><strong>VRSIIS HRM:</strong> Attendance app – <a href="https://play.google.com/store/apps/details?id=com.VRSATTENDANCE" target="_blank">Play Store</a></li>
+        <li><strong>SmartHealth:</strong> Bluetooth-based health monitoring – <a href="https://play.google.com/store/apps/details?id=com.smartHealth" target="_blank">Play Store</a></li>
+        <li><strong>SynqTransfer:</strong> File transfer app – <a href="https://www.synqapp.in/" target="_blank">Website</a></li>
+        <li><strong>NishConnect:</strong> Chat + AI + Drive – <a href="https://www.nishconnect.com/" target="_blank">Website</a></li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>✅ Preferences</h2>
-    <ul>
-      <li>Open to: Full-Time, Remote, or Freelance opportunities</li>
-      <li>Comfortable using ChatGPT & AI tools in production</li>
-      <li>Immediate joiner</li>
-    </ul>
-  </div>
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:ashishdattu@gmail.com">ashishdattu@gmail.com</a></p>
+      <p>Phone: +91-9160319012</p>
+      <div class="socials">
+        <a href="https://linkedin.com/in/YOUR_ID" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YOUR_ID" target="_blank">GitHub</a>
+        <a href="mailto:ashishdattu@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
