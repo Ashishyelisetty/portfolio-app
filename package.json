@@ -3,7 +3,7 @@
   "name": "portfolio-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/portfolio-app",
+  "homepage": "https://Ashishyelisetty.github.io/portfolio-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
